@@ -6,20 +6,25 @@ import StyledHeader from "../components/StyledHeader";
 import StyledSuggestion from "../components/StyledSuggestion";
 import StyledTimerContainer from "../components/StyledTimerContainer";
 import StyledButton from "../components/StyledButton";
+import StyledDisplay from "../components/StyledDisplay";
 import Timer from "../components/Timer";
 
 import tasks from "../data/tasks.json";
 import { Suggestion } from "../components/Suggestion";
 
 import { motion } from "framer-motion";
+import { useLocalStorage } from "../utils/useLocalStorage";
+import { Warning } from "../components/Warning";
 
 export default function Home() {
   const time = new Date();
   time.setSeconds(time.getSeconds() + 10);
 
-  const [cookieCount, setCookieCount] = useState(0);
+  const [cookieCount, setCookieCount] = useLocalStorage("cookieCount", 0);
   const [task, setTask] = useState(null);
   const [visible, setVisible] = useState(false);
+  const [warning, setWarning] = useState(false);
+  const [flag, setFlag] = useState(false);
 
   function handleCount() {
     setCookieCount(cookieCount + 1);
@@ -32,7 +37,13 @@ export default function Home() {
     console.log(randomTask);
   }
 
-  function getTimer() {}
+  function handleCookieReset() {
+    setCookieCount(0);
+  }
+
+  function handleWarning() {
+    setWarning(!warning);
+  }
 
   return (
     <>
@@ -48,33 +59,68 @@ export default function Home() {
         Theasy<p>... putting the easy in thesis</p>
       </StyledHeader>
       <StyledContainer>
-        <StyledButton
-          variant="get"
-          onClick={() => {
-            getTask();
-          }}
-        >
-          Get Task
-        </StyledButton>
-        {task !== null ? (
-          <motion.div animate={{ x: 0 }} initial={{ x: -1000 }}>
-            <Suggestion task={task} />
-          </motion.div>
-        ) : null}
-        <StyledButton
-          variant="get"
-          onClick={() => {
-            setVisible(true);
-          }}
-        >
-          Get Timer
-        </StyledButton>
-        {visible ? (
-          <motion.div animate={{ x: 0 }} initial={{ x: -1000 }}>
-            <Timer expiryTimestamp={time} handleCount={handleCount} />
-          </motion.div>
-        ) : null}
-        <CookieCounter cookieCount={cookieCount} />
+        {flag ? null : (
+          <>
+            <p>Need a place to start?</p>
+            <StyledButton
+              variant="get"
+              onClick={() => {
+                setFlag(true);
+              }}
+            >
+              Start
+            </StyledButton>
+          </>
+        )}
+        <StyledDisplay visible={flag ? true : false}>
+          <StyledButton
+            variant="get"
+            onClick={() => {
+              getTask();
+            }}
+          >
+            Pick A Task
+          </StyledButton>
+          {task !== null ? (
+            <motion.div animate={{ x: 0 }} initial={{ x: -1000 }}>
+              <Suggestion task={task} />
+            </motion.div>
+          ) : null}
+          <StyledButton
+            variant="get"
+            onClick={() => {
+              setVisible(true);
+            }}
+          >
+            10 Minute Timer
+          </StyledButton>
+          {visible ? (
+            <motion.div animate={{ x: 0 }} initial={{ x: -1000 }}>
+              <Timer expiryTimestamp={time} handleCount={handleCount} />
+            </motion.div>
+          ) : null}
+          <CookieCounter cookieCount={cookieCount} />
+          <StyledButton
+            variant="warning"
+            onClick={() => {
+              handleWarning();
+            }}
+          >
+            Cookie Reset
+          </StyledButton>
+          {warning ? (
+            <motion.div
+              animate={{ x: 0 }}
+              initial={{ x: -1000 }}
+              whileHover={{ scale: 1.1 }}
+            >
+              <Warning
+                handleCookieReset={handleCookieReset}
+                handleWarning={handleWarning}
+              />
+            </motion.div>
+          ) : null}
+        </StyledDisplay>
       </StyledContainer>
     </>
   );

@@ -1,42 +1,42 @@
 [
   {
     "index": 1,
-    "title": "Research",
-    "desc": "Investigate a topic that you have not worked on before"
+    "title": "🔎 Research",
+    "desc": "Investigate a topic that you have not worked on before!"
   },
   {
     "index": 2,
-    "title": "Deep Dive",
-    "desc": "Research one specific part of a subject"
+    "title": "📚 Deep Dive",
+    "desc": "Research one specific part of a subject!"
   },
   {
     "index": 3,
-    "title": "Implementation",
-    "desc": "Perhaps it is time to apply some of the concepts you have researched"
+    "title": "🔧 Implementation",
+    "desc": "Perhaps it is time to apply some of the concepts you have researched?"
   },
   {
     "index": 4,
-    "title": "Refactor",
-    "desc": "Maybe some of that code needs additional TLC"
+    "title": "♻️ Refactor",
+    "desc": "Maybe some of that code needs additional TLC?"
   },
   {
     "index": 5,
-    "title": "Revision",
-    "desc": "Why not revisit a concept you have written about and see whether it might benefit from a fresh perspective"
+    "title": "🤔 Revision",
+    "desc": "Why not revisit a concept you have written about and see whether it might benefit from a fresh perspective?"
   },
   {
     "index": 6,
-    "title": "Reading",
-    "desc": "Read an article you have not read before"
+    "title": "📖 Reading",
+    "desc": "Read an article you have not read before!"
   },
   {
     "index": 7,
-    "title": "Pipeline",
-    "desc": "Try a different approach to how you process a subject - maybe start with the conclusion and work your way backwards"
+    "title": "↪️ Pipeline",
+    "desc": "Try a different approach to how you process a subject - maybe start with the conclusion and work your way backwards!"
   },
   {
     "index": 8,
-    "title": "Analysis",
-    "desc": "Find a way to improve any part of your thesis (wording, structure, ...) in its current state"
+    "title": "🧠 Analysis",
+    "desc": "Find a way to improve any part of your thesis (wording, structure, ...) in its current state!"
   }
 ]

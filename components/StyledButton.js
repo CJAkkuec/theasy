@@ -35,10 +35,11 @@ const StyledButton = styled.button`
     variant === "warning" &&
     css`
       color: white;
-      background-color: var(--warning);
+      width: fit-content;
+      background-color: var(--tertiary);
 
       &:hover {
-        background-color: var(--warning-light);
+        background-color: var(--error);
       }
     `}
 
