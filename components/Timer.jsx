@@ -39,7 +39,7 @@ function Timer({ expiryTimestamp, handleCount }) {
 
   function handleRestart() {
     const time = new Date();
-    time.setSeconds(time.getSeconds() + 10);
+    time.setSeconds(time.getSeconds() + 600);
     restart(time, false);
   }
 
