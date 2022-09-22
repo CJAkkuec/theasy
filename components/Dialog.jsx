@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Dialog = ({ handleOpen, handleRestart, handleCount }) => {
   return (
@@ -6,16 +7,18 @@ export const Dialog = ({ handleOpen, handleRestart, handleCount }) => {
       <StyledDialogContainer>
         <p>You did it! 🥳</p>
 
-        <p>Here's a cookie!</p>
-        <button
+        <p>Here&apos;s a cookie!</p>
+        <CookieButton
           onClick={() => {
             handleOpen();
             handleRestart();
             handleCount();
           }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
           🍪
-        </button>
+        </CookieButton>
       </StyledDialogContainer>
       <StyledBackDrop></StyledBackDrop>
     </>
@@ -45,4 +48,11 @@ const StyledBackDrop = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
+`;
+
+const CookieButton = styled(motion.button)`
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 4rem;
 `;

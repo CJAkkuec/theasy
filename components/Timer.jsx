@@ -11,6 +11,8 @@ import { Dialog } from "./Dialog";
 import StyledButton from "./StyledButton";
 import StyledButtonContainer from "./StyledButtonContainer";
 
+import StyledTimerContainer from "./StyledTimerContainer";
+
 function Timer({ expiryTimestamp, handleCount }) {
   const {
     seconds,
@@ -42,7 +44,7 @@ function Timer({ expiryTimestamp, handleCount }) {
   }
 
   return (
-    <>
+    <StyledTimerContainer>
       <h1>Timer</h1>
       <div>
         <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:
@@ -90,7 +92,7 @@ function Timer({ expiryTimestamp, handleCount }) {
           handleCount={handleCount}
         />
       ) : null}
-    </>
+    </StyledTimerContainer>
   );
 }
 

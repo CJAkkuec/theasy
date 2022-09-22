@@ -8,9 +8,10 @@ const StyledHeader = styled.header`
   width: 100%;
   font-size: 10rem;
   font-family: "Brush Script MT";
-  text-shadow: 3px 3px 0px var(--primary);
-  color: var(--secondary);
+  text-shadow: 3px 3px 0px var(--secondary);
+  color: var(--primary);
   text-align: center;
+  background-color: var(--off-white);
 
   & > p {
     font-family: Monaco, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",

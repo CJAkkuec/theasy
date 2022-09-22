@@ -18,13 +18,16 @@ const StyledButton = styled.button`
     `}
 
   ${({ variant }) =>
-    variant === "save" &&
+    variant === "get" &&
     css`
+      font-size: 1.3rem;
       color: white;
-      background-color: var(--tertiary);
+      width: fit-content;
+      background-color: var(--primary);
+      box-shadow: 3px 3px 0px var(--secondary);
 
       &:hover {
-        background-color: var(--tertiary-light);
+        background-color: var(--tertiary);
       }
     `}
 

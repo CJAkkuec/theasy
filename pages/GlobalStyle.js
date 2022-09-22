@@ -13,14 +13,11 @@ const GlobalStyle = createGlobalStyle`
     --primary-light: #9BECEC;
     --secondary: #CDE5E3;
     --secondary-light: #DBEDEB;
-    --tertiary: #F5DFDF;
-    --tertiary-light: #F8E9E9;
-    --decoration: #EFCCCC;
+    --tertiary: #F8C8DC;
+    --tertiary-light: #FFE5F0;
   
     --warning:  #ED8B16;
-    --warning-light: #F1A347;
-    --error: #E1523D;
-    --error-light: #EB6F5C;
+    --error: hotpink;
   }
 
   body {

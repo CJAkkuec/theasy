@@ -11,7 +11,8 @@ export const CookieCounter = ({ cookieCount }) => {
       </StyledGrid>
       <StyledFlex>
         <StyledText>Offline Cookie Exchange Rate</StyledText>
-        <StyledText>1:1</StyledText>
+        <StyledText>1:1 in batches of 10</StyledText>
+        <StyledText>... no cheating!</StyledText>
       </StyledFlex>
     </>
   );
@@ -33,7 +34,7 @@ const StyledCount = styled.div`
   ${({ countActive = "false" }) =>
     countActive === "false" &&
     css`
-      color: var(--error);
+      color: var(--tertiary);
     `}
 `;
 
@@ -47,12 +48,16 @@ const StyledGrid = styled.div`
   display: grid;
   place-items: center;
   grid-template-areas: "box";
+  margin-top: 4rem;
 `;
 
 const StyledFlex = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 `;
 
-const StyledText = styled.p``;
+const StyledText = styled.p`
+  color: grey;
+`;
