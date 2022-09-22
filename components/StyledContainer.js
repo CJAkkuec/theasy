@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
   width: 80vw;
-  height: 100vh;
-  margin: auto;
+  margin: 20rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Research",
+    "desc": "Investigate a topic that you haven't worked on before"
+  },
+  {
+    "title": "Deep Dive",
+    "desc": "Research one specific element of a subject"
+  },
+  {
+    "title": "Implementation",
+    "desc": "Perhaps it's time to apply some of the concepts you've researched"
+  },
+  {
+    "title": "Refactor",
+    "desc": "Maybe some of that code needs additional TLC"
+  },
+  {
+    "title": "Revision",
+    "desc": "Why not revisit a concept you've written about and see whether it might benefit from a fresh perspective"
+  },
+  {
+    "title": "Reading",
+    "desc": "Read an article you haven't read before"
+  },
+  {
+    "title": "Pipeline",
+    "desc": "Try a different approach to how you process a subject - maybe start with the conclusion and work your way backwards"
+  },
+  {
+    "title": "Analysis",
+    "desc": "Find a way to improve any part of your thesis (wording, structure, ...) in its current state"
+  }
+]
