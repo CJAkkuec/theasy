@@ -18,7 +18,7 @@ import { Warning } from "../components/Warning";
 
 export default function Home() {
   const time = new Date();
-  time.setSeconds(time.getSeconds() + 600);
+  time.setSeconds(time.getSeconds() + 1500);
 
   const [cookieCount, setCookieCount] = useLocalStorage("cookieCount", 0);
   const [task, setTask] = useState(null);
