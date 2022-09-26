@@ -54,8 +54,12 @@ function Timer({ expiryTimestamp, handleCount }) {
       <StyledButtonContainer>
         <StyledButton
           onClick={() => {
-            start();
-            setIsPaused(false);
+            if (isPaused) {
+              resume();
+            } else {
+              start();
+              setIsPaused(false);
+            }
           }}
         >
           <Icon path={mdiPlay} title="Play" size={1} color="grey" />
