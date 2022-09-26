@@ -92,7 +92,7 @@ export default function Home() {
               setVisible(true);
             }}
           >
-            10 Minute Timer
+            25 Minute Timer
           </StyledButton>
           {visible ? (
             <motion.div animate={{ x: 0 }} initial={{ x: -1000 }}>
